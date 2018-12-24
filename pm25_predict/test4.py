@@ -60,8 +60,7 @@ for l in L:
     sum += abs(l)
 print(sum / len(L))
 
-plt.plot(y,'x',color = "red",label="target")
-plt.plot(t,'o',color = "blue",label="hypothesis")
-plt.legend(loc="upper left")
-plt.ylabel('pm 2.5')
+real = plt.plot(y,'x')
+pred = plt.plot(t,'o')
+plt.legend((real[0], pred[0]),('real value','predict value'))
 plt.show()
